@@ -14,36 +14,6 @@ A professional REST API built with FastAPI that integrates with WeatherAPI.com t
 - **Input Validation**: Pydantic models for request/response validation
 - **API Documentation**: Auto-generated OpenAPI/Swagger documentation
 
-## Project Structure
-
-```
-weather_api/
-├── app/
-│   ├── __init__.py
-│   ├── main.py                 # FastAPI application and server setup
-│   ├── api/
-│   │   ├── __init__.py
-│   │   └── weather.py          # Weather API endpoints
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── config.py           # Configuration management
-│   │   └── logging_config.py   # Logging setup
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── weather_models.py   # WeatherAPI response models
-│   │   └── response_models.py  # API response models
-│   ├── services/
-│   │   ├── __init__.py
-│   │   └── weather_service.py  # Business logic and API integration
-│   └── utils/
-│       ├── __init__.py
-│       └── exceptions.py       # Custom exceptions
-├── constant.ini                # Configuration file
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project documentation
-└── .gitignore                  # Git ignore rules
-```
-
 ## Quick Start
 
 ### Prerequisites
@@ -292,31 +262,6 @@ httpx==0.25.2
 python-multipart==0.0.6
 configparser==6.0.0
 ```
-
-## Architecture
-
-This application follows enterprise-level design patterns:
-
-### Object-Oriented Design
-- **Configuration Class**: Singleton pattern for configuration management
-- **Service Classes**: Encapsulate business logic and external API communication
-- **Router Classes**: Organize API endpoints with dependency injection
-
-### Pydantic Models
-- **Input Validation**: Automatic request validation
-- **Output Serialization**: Consistent response formatting
-- **Type Safety**: Full type hints throughout the application
-
-### Error Handling
-- **Custom Exceptions**: Specific exception types for different error scenarios
-- **Global Exception Handlers**: Centralized error processing
-- **Structured Error Responses**: Consistent error format across all endpoints
-
-### Logging
-- **Structured Logging**: Detailed log format with timestamps and context
-- **File Rotation**: Automatic log file rotation (10MB max, 5 backups)
-- **Multiple Handlers**: Console and file logging
-- **Configurable Levels**: Adjustable logging verbosity
 
 ##  Testing
 
